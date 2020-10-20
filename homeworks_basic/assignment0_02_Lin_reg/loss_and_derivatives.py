@@ -107,7 +107,7 @@ class LossAndDerivatives:
 
         # YOUR CODE HERE
         #return np.array(map(lambda diff : 0 if diff == 0 else 1 if diff > 0 else -1, list(X.dot(w) - Y)))
-        return np.sum((X.T.dot(np.sign(X.dot(w) - Y)))) / (Y.shape[0])
+        return ((X.T.dot(np.sign(X.dot(w) - Y)))) / (Y.shape[0])
     
     @staticmethod
     def l2_reg_derivative(w):
